@@ -1,0 +1,101 @@
+<html>
+<head>
+  <title>Evernote Export</title>
+  <basefont face="微软雅黑" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="YXBJ Windows/600646 (zh-CN, DDL); Windows/10.0.0 (Win64);"/>
+  <meta name="content-class" content="yinxiang.markdown"/>
+  <style>
+    body, td {
+      font-family: 微软雅黑;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="1381"/>
+
+<div><span><div style="font-size: 14px; margin: 0; padding: 0; width: 100%;"><h2 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 34px; border-bottom: 1px solid #dbdbdb; color: #333;">hexo+github pages搭建博客</h2>
+<h2 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 34px; border-bottom: 1px solid #dbdbdb; color: #333;">常见搭建博客的工具</h2>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<p style="line-height: 160%; box-sizing: content-box; color: #333; margin: 0;">自己搭建：</p>
+<p style="line-height: 160%; box-sizing: content-box; color: #333; margin: 0;">php: typecho、wordpress</p>
+<p style="line-height: 160%; box-sizing: content-box; color: #333; margin: 0;">nodejs: hexo+github pages    或  jekyll +github pages</p>
+</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<p style="line-height: 160%; box-sizing: content-box; color: #333; margin: 0;">借助第三方平台：</p>
+<p style="line-height: 160%; box-sizing: content-box; color: #333; margin: 0;">csdn、<a href="https://segmentfault.com/" style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">segmentfault.com</a>、博客园、简书等等</p>
+</li>
+</ul>
+<h2 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 34px; border-bottom: 1px solid #dbdbdb; color: #333;">为什么要搭建个人博客</h2>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<p style="line-height: 160%; box-sizing: content-box; color: #333; margin: 0;">记录与备忘</p>
+</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<p style="line-height: 160%; box-sizing: content-box; color: #333; margin: 0;">优化技术，加深技术的理解</p>
+</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<p style="line-height: 160%; box-sizing: content-box; color: #333; margin: 0;">求职</p>
+</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<p style="line-height: 160%; box-sizing: content-box; color: #333; margin: 0;">坚持</p>
+</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">
+<p style="line-height: 160%; box-sizing: content-box; color: #333; margin: 0;">个人品牌</p>
+<p style="line-height: 160%; box-sizing: content-box; color: #333; margin: 0;">.....</p>
+</li>
+</ul>
+<h2 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 34px; border-bottom: 1px solid #dbdbdb; color: #333;">使用hexo+github pages搭建博客</h2>
+<h3 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 27px; color: #333;">安装要求</h3>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">确保自己电脑以安装以下工具：</p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">git</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">nodejs</li>
+</ul>
+<h3 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 27px; color: #333;">安装步骤</h3>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">官网地址： <a href="https://hexo.io/zh-cn" style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">https://hexo.io/zh-cn</a>/</p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">hexo模板主题：<a href="https://hexo.io/themes/" style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">https://hexo.io/themes/</a></p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">1、全局安装hexo-cli</p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">npm install hexo-cli -g  
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">2、初始化项目</p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">hexo init &lt;folder&gt;
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">3、hexo常用的几个命令：</p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">hexo n '文章的名称'                  #创建文章
+hexo g 				        #生成静态页面
+hexo s  			                 #启动本地服务，进行预览
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">hexo s</code> 后直接打开浏览器输入地址进行预览即可。</p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">​</p>
+<h2 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 34px; border-bottom: 1px solid #dbdbdb; color: #333;">创建github pages仓库</h2>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">1、要求</p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">创建的仓库名格式必须为： <code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">用户名.github.io</code></p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">如github用户名为ww1234, 仓库名为：<code style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; color: #c1788b; padding: 4px 4px 2px 0; letter-spacing: -.3px;">ww1234.github.io</code></p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">2、修改 _config.yml 配置git仓库：</p>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">修改配置文件 _config.yml ，指定仓库地址</li>
+</ul>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">deploy:
+  type: git
+  repo: git@github.com:qingtian-boy/qingtian-boy.github.io.git
+  branch: master
+</code></pre>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333; margin-top: 0; margin-bottom: 0;">type:和repo:后面有个空格，上面是ssh协议， 需配置好ssh协议的私钥和公钥</p>
+</blockquote>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">安装一个工具，用于部署到仓库中</li>
+</ul>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">npm install hexo-deployer-git --save
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">网站部署到github page仓库中</p>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">hexo d
+</code></pre>
+<h3 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 27px; color: #333;">换hexo网站主题</h3>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">参考地址：https://hexo.io/themes/</p>
+<h3 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 27px; color: #333;">在创建一个仓库，用于备份博客源码</h3>
+</div><center style="display:none !important;visibility:collapse !important;height:0 !important;white-space:nowrap;width:100%;overflow:hidden">%23%23%20hexo%2Bgithub%20pages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%0A%0A%0A%0A%23%23%20%E5%B8%B8%E8%A7%81%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%B7%A5%E5%85%B7%0A%0A-%20%E8%87%AA%E5%B7%B1%E6%90%AD%E5%BB%BA%EF%BC%9A%0A%0A%20%20php%3A%20typecho%E3%80%81wordpress%0A%0A%20%20nodejs%3A%20hexo%2Bgithub%20pages%20%20%20%20%E6%88%96%20%20jekyll%20%2Bgithub%20pages%20%0A%0A-%20%E5%80%9F%E5%8A%A9%E7%AC%AC%E4%B8%89%E6%96%B9%E5%B9%B3%E5%8F%B0%EF%BC%9A%0A%0A%20%20csdn%E3%80%81%5Bsegmentfault.com%5D(https%3A%2F%2Fsegmentfault.com%2F)%E3%80%81%E5%8D%9A%E5%AE%A2%E5%9B%AD%E3%80%81%E7%AE%80%E4%B9%A6%E7%AD%89%E7%AD%89%0A%0A%23%23%20%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%0A%0A-%20%E8%AE%B0%E5%BD%95%E4%B8%8E%E5%A4%87%E5%BF%98%0A%0A-%20%E4%BC%98%E5%8C%96%E6%8A%80%E6%9C%AF%EF%BC%8C%E5%8A%A0%E6%B7%B1%E6%8A%80%E6%9C%AF%E7%9A%84%E7%90%86%E8%A7%A3%0A%0A-%20%E6%B1%82%E8%81%8C%0A%0A-%20%E5%9D%9A%E6%8C%81%0A%0A-%20%E4%B8%AA%E4%BA%BA%E5%93%81%E7%89%8C%0A%0A%20%20.....%0A%0A%0A%0A%23%23%20%E4%BD%BF%E7%94%A8hexo%2Bgithub%20pages%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%0A%0A%0A%0A%23%23%23%20%20%E5%AE%89%E8%A3%85%E8%A6%81%E6%B1%82%0A%0A%E7%A1%AE%E4%BF%9D%E8%87%AA%E5%B7%B1%E7%94%B5%E8%84%91%E4%BB%A5%E5%AE%89%E8%A3%85%E4%BB%A5%E4%B8%8B%E5%B7%A5%E5%85%B7%EF%BC%9A%0A%0A-%20git%0A-%20nodejs%0A%0A%0A%0A%23%23%23%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%0A%0A%E5%AE%98%E7%BD%91%E5%9C%B0%E5%9D%80%EF%BC%9A%20%5Bhttps%3A%2F%2Fhexo.io%2Fzh-cn%5D(https%3A%2F%2Fhexo.io%2Fzh-cn)%2F%20%20%0A%0Ahexo%E6%A8%A1%E6%9D%BF%E4%B8%BB%E9%A2%98%EF%BC%9A%5Bhttps%3A%2F%2Fhexo.io%2Fthemes%2F%5D(https%3A%2F%2Fhexo.io%2Fthemes%2F)%0A%0A%0A%0A1%E3%80%81%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85hexo-cli%0A%0A%60%60%60%0Anpm%20install%20hexo-cli%20-g%20%20%0A%60%60%60%0A%0A%0A%0A2%E3%80%81%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE%0A%0A%60%60%60%0Ahexo%20init%20%3Cfolder%3E%0A%60%60%60%0A%0A%0A%0A3%E3%80%81hexo%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%A0%E4%B8%AA%E5%91%BD%E4%BB%A4%EF%BC%9A%0A%0A%60%60%60%0Ahexo%20n%20'%E6%96%87%E7%AB%A0%E7%9A%84%E5%90%8D%E7%A7%B0'%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%E5%88%9B%E5%BB%BA%E6%96%87%E7%AB%A0%0Ahexo%20g%20%09%09%09%09%20%20%20%20%20%20%20%20%23%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%0Ahexo%20s%20%20%09%09%09%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%E5%90%AF%E5%8A%A8%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%EF%BC%8C%E8%BF%9B%E8%A1%8C%E9%A2%84%E8%A7%88%0A%60%60%60%0A%0A%60hexo%20s%60%20%E5%90%8E%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BE%93%E5%85%A5%E5%9C%B0%E5%9D%80%E8%BF%9B%E8%A1%8C%E9%A2%84%E8%A7%88%E5%8D%B3%E5%8F%AF%E3%80%82%0A%0A%E2%80%8B%09%0A%0A%23%23%20%E5%88%9B%E5%BB%BAgithub%20pages%E4%BB%93%E5%BA%93%0A%0A1%E3%80%81%E8%A6%81%E6%B1%82%0A%0A%E5%88%9B%E5%BB%BA%E7%9A%84%E4%BB%93%E5%BA%93%E5%90%8D%E6%A0%BC%E5%BC%8F%E5%BF%85%E9%A1%BB%E4%B8%BA%EF%BC%9A%20%60%E7%94%A8%E6%88%B7%E5%90%8D.github.io%60%20%20%20%0A%0A%E5%A6%82github%E7%94%A8%E6%88%B7%E5%90%8D%E4%B8%BAww1234%2C%20%E4%BB%93%E5%BA%93%E5%90%8D%E4%B8%BA%EF%BC%9A%60ww1234.github.io%60%0A%0A2%E3%80%81%E4%BF%AE%E6%94%B9%20_config.yml%20%E9%85%8D%E7%BD%AEgit%E4%BB%93%E5%BA%93%EF%BC%9A%0A%0A-%20%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%20_config.yml%20%EF%BC%8C%E6%8C%87%E5%AE%9A%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80%0A%0A%60%60%60%0Adeploy%3A%0A%20%20type%3A%20git%0A%20%20repo%3A%20git%40github.com%3Aqingtian-boy%2Fqingtian-boy.github.io.git%0A%20%20branch%3A%20master%0A%60%60%60%0A%0A%3Etype%3A%E5%92%8Crepo%3A%E5%90%8E%E9%9D%A2%E6%9C%89%E4%B8%AA%E7%A9%BA%E6%A0%BC%EF%BC%8C%E4%B8%8A%E9%9D%A2%E6%98%AFssh%E5%8D%8F%E8%AE%AE%EF%BC%8C%20%E9%9C%80%E9%85%8D%E7%BD%AE%E5%A5%BDssh%E5%8D%8F%E8%AE%AE%E7%9A%84%E7%A7%81%E9%92%A5%E5%92%8C%E5%85%AC%E9%92%A5%0A%0A-%20%E5%AE%89%E8%A3%85%E4%B8%80%E4%B8%AA%E5%B7%A5%E5%85%B7%EF%BC%8C%E7%94%A8%E4%BA%8E%E9%83%A8%E7%BD%B2%E5%88%B0%E4%BB%93%E5%BA%93%E4%B8%AD%0A%0A%0A%60%60%60%0Anpm%20install%20hexo-deployer-git%20--save%0A%60%60%60%0A%0A%0A%0A%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2%E5%88%B0github%20page%E4%BB%93%E5%BA%93%E4%B8%AD%0A%60%60%60%0Ahexo%20d%0A%60%60%60%0A%0A%23%23%23%20%E6%8D%A2hexo%E7%BD%91%E7%AB%99%E4%B8%BB%E9%A2%98%0A%0A%E5%8F%82%E8%80%83%E5%9C%B0%E5%9D%80%EF%BC%9Ahttps%3A%2F%2Fhexo.io%2Fthemes%2F%0A%0A%0A%0A%0A%0A%23%23%23%20%20%E5%9C%A8%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93%EF%BC%8C%E7%94%A8%E4%BA%8E%E5%A4%87%E4%BB%BD%E5%8D%9A%E5%AE%A2%E6%BA%90%E7%A0%81</center></span>
+</div></body></html> 

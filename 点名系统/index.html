@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				background: red;
+				height: 100%;
+			}
+			.box{
+				width: 200px;
+				height: 200px;
+				margin:100px auto 20px;
+				background: yellow;
+				border-radius: 50%;
+				line-height: 200px;
+				text-align: center;
+				font-size: 30px;
+				font-weight: bold;
+				box-shadow:5px 5px 5px black;
+				cursor: pointer;
+				display: none;
+			}
+			/*
+			#box:hover{
+				animation: ani 1s linear;
+			}
+			
+			* */
+			@keyframes ani{
+				from{
+					color: black;
+					background: yellow;
+				}
+				to{
+					color: white;
+					background: blue;
+				}
+			}
+			#btn{
+				width: 300px;
+				margin: auto;
+				height: 30px;
+			}
+			#btn button{
+				border-radius: 15px;
+				width: 90px;
+				height: 30px;
+				cursor: pointer;
+			}
+			/*#content{
+				width: 200px;
+				height: 200px;
+				font-size: 30px;
+				font-weight: bold;
+				border-radius: 50%;
+				background: green;
+				color: white;
+				position: absolute;
+				left: 0;
+				top: 100px;
+				text-align: center;
+				line-height: 200px;
+			}*/
+			@keyframes move{
+				from{
+					left: 0;
+					top: 100px;
+					border-radius: 0%;
+					height: 50px;
+					transform: rotate(0deg);
+				}
+				to{
+					left: 300px;
+					border-radius: 50%;
+					height: 200px;
+					transform: rotate(720deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="oDov1" class="box">
+			个人准备！
+		</div>
+		<div id="oDov2" class="box">
+			各组长准备！
+		</div>
+		<div id="content" class="box">5</div>
+		<div id="btn">
+			<button calss="personal">个人模式</button>
+			<button class="headman">组长模式</button>
+			<button class="black">黑名单模式</button>
+		</div>
+	</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	var timer;
+	var index = 5;
+	//console.log($("#box"))
+	$(".box").bind("mouseenter",function(){
+		
+		$(this).addClass("animated rubberBand").html("准备开始！");
+		
+	}).bind("mouseleave",function(){
+		$(this).removeClass("animated rubberBand");
+	})
+	
+	
+	var arr = [];
+		
+	var classes = [];
+	
+	var blackList = ["谢华权","杨裕航","钟治生","庄丹耀"];
+	
+	var classList = ["晏子圳","余啸巍","郑剑熊","陈伟","段步坤","漆洪亮",
+	"冯家瑞","钟荞山","范文静","汪亮","韩露","苏月","魏京魁","朱旋","张伟航",
+	"王佳政","叶球","彭玉雄","尹继强","付豪","许少锋","钱文波","黄金跃","熊志",
+	"廖永幸","陈茂华","赖旺林","刘沛","赖强强","梁欢","朱佳文","杜祺宇",
+	"周亦鹏","李亚丽","曾海清","王宇皎","刘诗","曾朝婷","余海雄","黄盛强","王俊",
+	"丁小迪","兰星","杨裕航","孙胜","颜晗","江琴","刘锦","王剑辉","陈婷",
+	"刘名涛","曹小文","陈小荟","黎星龙","方丽萍","钟治生","林俊鸿","伍延明","郑合贵",
+	"余陈","庄丹耀","李金益","王飞","欧文","周倍安","罗小猛","颜敏","谢华权"
+	];
+	
+	$("#btn").find("button:first-child").click(function(){
+		classes = JSON.parse(JSON.stringify(classList));
+		clearInterval(timer);
+		index = 5;
+		$("#content").html(index);
+		$(".box").hide(500);
+		$(".box").eq(0).show(500);
+	})
+	
+	$("#btn").find(".headman").bind("click",function(){
+		clearInterval(timer);
+		index = 5;
+		$("#content").html(index);
+		$(".box").hide(500);
+		$(".box").eq(1).show(500);
+	})
+	$("#btn").find(".black").bind("click",function(){
+		classes = JSON.parse(JSON.stringify(blackList));
+		clearInterval(timer);
+		index = 5;
+		$("#content").html(index);
+		$(".box").hide(500);
+		$(".box").eq(0).show(500);
+	})
+	
+	$("#oDov2").bind("click",function(){
+		$(".box").hide().unbind("mouseenter").unbind("mouseleave");
+		$("#content").show().addClass("animated rubberBand");
+		//$("#btn").find("button:last-child").unbind("click");
+		var rand = Math.floor(Math.random()*13);
+		timer = setInterval(function(){
+			index--;
+			$("#content").html(index);
+			if(index == 0){
+				clearInterval(timer);
+				$("#content").html(arr[rand]);
+			}
+		},1000);
+	})
+	$("#oDov1").bind("click",function(){
+		
+		$(".box").hide().unbind("mouseenter").unbind("mouseleave");
+		$("#content").show().addClass("animated rubberBand");
+		var rand = parseInt(Math.random()*classes.length);
+		//console.log(classes,classes.length,rand);
+		timer = setInterval(function(){
+			index--;
+			$("#content").html(index);
+			if(index == 0){
+				clearInterval(timer);
+				//alert(classes)
+				console.log(classes,classes[rand],rand);
+				$("#content").html(classes[rand]);
+			}
+		},1000);
+	})
+	
+	
+	
+	
+	
+	
+	
+	
+</script>
